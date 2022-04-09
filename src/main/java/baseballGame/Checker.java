@@ -13,4 +13,14 @@ public class Checker {
         return count;
     }
 
+    public int countEqualSpace(List<Integer> computerNumbers, List<Integer> userNumbers){
+        int count=0;
+        for(int i=0;i<computerNumbers.size();i++){
+            if(computerNumbers.get(i)==userNumbers.get(i)){
+                count++;
+            }
+        }
+        return count;
+    }
+
 }
