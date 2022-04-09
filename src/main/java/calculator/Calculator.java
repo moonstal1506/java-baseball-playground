@@ -34,6 +34,22 @@ public class Calculator {
         return result / num;
     }
 
+    public int calculate(int result, String operator, int num) {
+        if (operator.equals("+")) {
+            return add(result, num);
+        }
+        if (operator.equals("-")) {
+            return subtract(result, num);
+        }
+        if (operator.equals("*")) {
+            return multiply(result, num);
+        }
+        if (operator.equals("/")) {
+            return divide(result, num);
+        }
+        throw new IllegalArgumentException();
+    }
+
     public static void main(String[] args) {
 
     }

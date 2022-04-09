@@ -2,6 +2,8 @@ package calculator;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
@@ -61,4 +63,13 @@ class CalculatorTest {
         }).isInstanceOf(ArithmeticException.class)
                 .hasMessageContaining("zero");
     }
+
+    @ParameterizedTest
+    @CsvSource({"+,6", "-,2", "*,8", "/,2"})
+    @DisplayName("부호에 따라 계산")
+    void calculate(String input, int expected) {
+        int result = calculator.calculate(4, input, 2);
+        assertEquals(expected, result);
+    }
+
 }
