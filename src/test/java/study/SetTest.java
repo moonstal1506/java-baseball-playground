@@ -28,21 +28,21 @@ public class SetTest {
     // Test Case 구현
     @Test
     @DisplayName("Set 크기 확인")
-    public void size(){
+    public void size() {
         assertThat(numbers.size()).isEqualTo(3);
     }
 
     @ParameterizedTest
-    @ValueSource(ints = {1,2,3})
+    @ValueSource(ints = {1, 2, 3})
     @DisplayName("Set 값 확인")
-    public void contains(int input){
+    public void contains(int input) {
         assertThat(numbers.contains(input)).isTrue();
     }
 
     @ParameterizedTest
     @CsvSource({"1,true", "2,true", "3,true", "4,false", "5,false"})
     @DisplayName("Set 입력값 따른 결과값 확인")
-    public void contains2(int input,boolean expected){
+    public void contains2(int input, boolean expected) {
         boolean actualValue = numbers.contains(input);
         assertEquals(expected, actualValue);
     }

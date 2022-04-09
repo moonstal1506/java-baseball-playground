@@ -24,3 +24,10 @@ git checkout main // 기본 브랜치가 main인 경우
 git checkout -b 브랜치이름
 ex) git checkout -b apply-feedback
 ```
+## 문자열 계산기 기능목록
+
+---
+- 문자열을 입력받는다
+- 공백 문자열 기준으로 문자 분리
+- 문자열을 숫자로 변경한다
+- 부호에 따라 계산한다.
