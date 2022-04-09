@@ -16,4 +16,10 @@ class CalculatorTest {
         String[] values=calculator.split("2 + 3 * 4 / 2");
         assertThat(values[3]).isEqualTo("*");
     }
+
+    @Test
+    void 문자열을_숫자로() {
+        int value=calculator.makeInt("2");
+        assertThat(value).isEqualTo(2);
+    }
 }
