@@ -50,12 +50,12 @@ public class Calculator {
         throw new IllegalArgumentException();
     }
 
-    public int stringCalculate(String value){
-        String[] values=split(value);
+    public int stringCalculate(String value) {
+        String[] values = split(value);
         int result = makeInt(values[0]);
         for (int i = 2; i < values.length; i += 2) {
-            int number=makeInt(values[i]);
-            result= calculate(result,values[i-1],number);
+            int number = makeInt(values[i]);
+            result = calculate(result, values[i - 1], number);
         }
         return result;
     }
@@ -63,7 +63,7 @@ public class Calculator {
 
     public static void main(String[] args) {
         Calculator calculator = new Calculator();
-        String value=calculator.input();
+        String value = calculator.input();
         System.out.println(calculator.stringCalculate(value));
 
     }
