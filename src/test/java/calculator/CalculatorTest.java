@@ -72,4 +72,11 @@ class CalculatorTest {
         assertEquals(expected, result);
     }
 
+    @Test
+    @DisplayName("문자열 계산")
+    void stringCalculate() {
+        int result = calculator.stringCalculate("2 + 3 * 4 / 2");
+        assertThat(result).isEqualTo(10);
+    }
+
 }
