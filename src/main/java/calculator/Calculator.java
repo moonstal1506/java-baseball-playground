@@ -50,7 +50,21 @@ public class Calculator {
         throw new IllegalArgumentException();
     }
 
+    public int stringCalculate(){
+        String value=input();
+        String[] values=split(value);
+        int result = makeInt(values[0]);
+        for (int i = 2; i < values.length; i += 2) {
+            int number=makeInt(values[i]);
+            result= calculate(result,values[i-1],number);
+        }
+        return result;
+    }
+
+
     public static void main(String[] args) {
+        Calculator calculator = new Calculator();
+        System.out.println(calculator.stringCalculate());
 
     }
 }
