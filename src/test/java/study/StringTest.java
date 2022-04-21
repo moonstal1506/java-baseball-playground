@@ -15,8 +15,6 @@ public class StringTest {
     void split(){
         String[] numbers="1,2".split(",");
         assertThat(numbers).contains("1","2");
-
-
     }
 
     @Test
