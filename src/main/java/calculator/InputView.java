@@ -8,4 +8,8 @@ public class InputView {
         Scanner scanner = new Scanner(System.in);
         return scanner.nextLine();
     }
+
+    public static String[] spiltBySpace(String value){
+        return value.split(" ");
+    }
 }
