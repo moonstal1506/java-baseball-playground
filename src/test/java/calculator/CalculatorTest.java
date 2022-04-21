@@ -25,7 +25,7 @@ class CalculatorTest {
 
     @Test
     void 나누기() {
-        assertThat(Calculator.divide(1)).isEqualTo(0);
+        assertThat(Calculator.divide( 1)).isEqualTo(0);
     }
 
     @Test
@@ -39,5 +39,13 @@ class CalculatorTest {
     @Test
     void 부호에따라계산() {
         assertThat(Calculator.calculate(InputView.spiltBySpace(InputViewTest.NUMBER))).isEqualTo(10);
+    }
+
+    @Test
+    void 연산기호아닐경우() {
+        assertThatThrownBy(() -> {
+            Calculator.calculate(InputView.spiltBySpace("1 @ 3 $ 3"));
+        }).isInstanceOf(IllegalArgumentException.class)
+                .hasMessageContaining("연산기호가 아닙니다.");
     }
 }

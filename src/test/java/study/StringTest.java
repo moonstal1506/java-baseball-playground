@@ -6,19 +6,19 @@ import static org.assertj.core.api.Assertions.*;
 
 public class StringTest {
     @Test
-    void replace() {
+    void 문자바꾸기() {
         String actual = "abc".replace("b", "d");
         assertThat(actual).isEqualTo("adc");
     }
 
     @Test
-    void split() {
+    void 컴마로나누기() {
         String[] numbers = "1,2".split(",");
         assertThat(numbers).contains("1", "2");
     }
 
     @Test
-    void splitOne() {
+    void 일을컴마로나누면1이다() {
         String[] numbers = "1".split(",");
         assertThat(numbers).containsExactly("1");
     }
