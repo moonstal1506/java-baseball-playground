@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class InputViewTest {
 
-    private static final String NUMBER = "2 + 3 * 4 / 2";
+    public static final String NUMBER = "2 + 3 * 4 / 2";
 
     @ParameterizedTest
     @ValueSource(strings = {"2", "+", "3", "4", "/", "2"})

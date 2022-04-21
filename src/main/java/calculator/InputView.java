@@ -9,8 +9,8 @@ public class InputView {
         return scanner.nextLine();
     }
 
-    public static String[] spiltBySpace(String value) {
-        return value.split(" ");
+    public static String[] spiltBySpace(String number) {
+        return number.split(" ");
     }
 
 }
