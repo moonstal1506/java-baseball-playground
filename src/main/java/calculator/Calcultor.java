@@ -14,21 +14,21 @@ public class Calcultor {
 
     private int selectOperator(String[] numbers, int position) {
         if (numbers[position - 1].equals("+")) {
-            return Operator.add(result,toInt(numbers[position]));
+            return Operator.add(result, toInt(numbers[position]));
         }
         if (numbers[position - 1].equals("-")) {
-            return Operator.subtract(result,toInt(numbers[position]));
+            return Operator.subtract(result, toInt(numbers[position]));
         }
         if (numbers[position - 1].equals("*")) {
-            return Operator.multiply(result,toInt(numbers[position]));
+            return Operator.multiply(result, toInt(numbers[position]));
         }
         if (numbers[position - 1].equals("/")) {
-            return Operator.divide(result,toInt(numbers[position]));
+            return Operator.divide(result, toInt(numbers[position]));
         }
         throw new IllegalArgumentException("연산기호가 아닙니다.");
     }
 
-    private int toInt(String number){
+    private int toInt(String number) {
         return Integer.parseInt(number);
     }
 

@@ -2,13 +2,13 @@ package calculator;
 
 public class Number {
 
-    private String number;
-    private String[] numbers;
+    private final String number;
+    private final String[] numbers;
 
     public Number(String number) {
         checkValidation(number);
         this.number = number;
-        this.numbers= spiltBySpace();
+        this.numbers = spiltBySpace();
     }
 
     private void checkValidation(String number) {
@@ -16,6 +16,7 @@ public class Number {
             throw new IllegalArgumentException("값을 입력해야합니다.");
         }
     }
+
     private boolean isNullOrEmpty(String number) {
         return number == null || number.equals("");
     }
