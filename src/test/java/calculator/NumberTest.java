@@ -27,8 +27,8 @@ class NumberTest {
 
     @ParameterizedTest
     @ValueSource(strings = {"1", "+", "2"})
-    void 문자열_공백으로_나누기(String input){
-        Number number= new Number("1 + 2");
+    void 문자열_공백으로_나누기(String input) {
+        Number number = new Number("1 + 2");
         assertThat(number.getNumbers()).contains(input);
     }
 }
