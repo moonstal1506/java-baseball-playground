@@ -25,7 +25,7 @@ public class Calcultor {
         if (numbers[position - 1].equals("/")) {
             return Operator.divide(result,toInt(numbers[position]));
         }
-        return 0;
+        throw new IllegalArgumentException("연산기호가 아닙니다.");
     }
 
     private int toInt(String number){

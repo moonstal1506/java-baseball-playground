@@ -1,9 +1,11 @@
 package calculator;
 
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 class CalcultorTest {
 
@@ -17,5 +19,16 @@ class CalcultorTest {
         int result = calcultor.calculate(number.getNumbers());
         //then
         assertThat(result).isEqualTo(expected);
+    }
+
+    @Test
+    void 연산기호아닐경우() {
+        Number number = new Number("1 @ 3 $ 3");
+        Calcultor calcultor = new Calcultor();
+
+        assertThatThrownBy(() -> {
+            calcultor.calculate(number.getNumbers());
+        }).isInstanceOf(IllegalArgumentException.class)
+                .hasMessageContaining("연산기호가 아닙니다.");
     }
 }
