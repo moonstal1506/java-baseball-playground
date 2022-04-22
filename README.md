@@ -8,5 +8,5 @@
 - 곱하기✅
 - 나누기 (0으로 나눌경우 예외발생)✅
 - 부호에 따라 계산하기✅
-  - 사칙연산 기호가 아닌 경우 IllegalArgumentException
+  - 사칙연산 기호가 아닌 경우 IllegalArgumentException✅
 - 결과 출력하기✅
