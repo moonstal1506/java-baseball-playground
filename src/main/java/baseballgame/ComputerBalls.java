@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class Computer {
+public class ComputerBalls {
      private List<Integer> balls = new ArrayList<>();
      private Random random = new Random();
      private final int BALLS_SIZE=3;
