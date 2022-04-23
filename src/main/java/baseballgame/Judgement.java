@@ -5,7 +5,7 @@ public class Judgement {
     private int strike;
     private int ball;
 
-    public Judgement(int equalSpace,int equalNumber) {
+    public Judgement(int equalNumber,int equalSpace) {
         this.strike = equalSpace;
         this.ball = equalNumber-equalSpace;
     }
