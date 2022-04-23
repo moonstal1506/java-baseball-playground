@@ -3,7 +3,7 @@ package baseballgame;
 public class Main {
     public static void main(String[] args) {
         ComputerBalls computerBalls =new ComputerBalls();
-        
+        System.out.println(computerBalls.createBalls());
         int equalSpace=0;
         while(equalSpace!=3){
             InputView inputView = new InputView();
