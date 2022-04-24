@@ -26,7 +26,8 @@ public class Main {
         while(isContinue){
             playGame();
             InputView inputView = new InputView();
-            isContinue=inputView.isContinue(inputView.restartInput());
+            inputView.restartInput();
+            isContinue=inputView.isContinue();
         }
 
     }
