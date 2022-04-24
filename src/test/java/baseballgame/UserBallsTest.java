@@ -31,4 +31,12 @@ class UserBallsTest {
                 .hasMessageContaining("숫자 3개를 입력해주세요");
     }
 
+    @Test
+    void 중복숫자예외() {
+        assertThatThrownBy(() -> {
+            new UserBalls("111");
+        }).isInstanceOf(IllegalArgumentException.class)
+                .hasMessageContaining("중복된 숫자입니다.");
+    }
+
 }

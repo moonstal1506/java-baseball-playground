@@ -26,6 +26,9 @@ public class UserBalls {
     }
 
     private void addBall(int ball){
+        if(balls.contains(ball)){
+            throw new IllegalArgumentException("중복된 숫자입니다.");
+        }
         balls.add(ball);
     }
 
