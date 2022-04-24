@@ -15,11 +15,11 @@ public class Main {
             int equalNumber = counter.countEqualNumber(computerBalls.getBalls(), userBalls.getBalls());
             int equalSpace = counter.countEqualSpace(computerBalls.getBalls(), userBalls.getBalls());
 
-            Judgement judgement = new Judgement(equalNumber, equalSpace);
+            Result judgement = new Result(equalNumber, equalSpace);
             isAnswer = judgement.isAnswer();
 
             ResultView resultView = new ResultView();
-            resultView.printResult(judgement.judge());
+            resultView.printResult(judgement.report());
         }
     }
 

@@ -1,11 +1,11 @@
 package baseballgame;
 
-public class Judgement {
+public class Result {
 
     private final int strike;
     private final int ball;
 
-    public Judgement(int equalNumber, int equalSpace) {
+    public Result(int equalNumber, int equalSpace) {
         this.strike = equalSpace;
         this.ball = equalNumber - equalSpace;
     }
@@ -14,7 +14,7 @@ public class Judgement {
         return strike == 3;
     }
 
-    public String judge() {
+    public String report() {
         if (isNothing()) {
             return "낫싱";
         }
