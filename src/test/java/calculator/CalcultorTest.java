@@ -14,9 +14,9 @@ class CalcultorTest {
     void 문자열계산(String input, int expected) {
         //given
         Number number = new Number(input);
-        Calcultor calcultor = new Calcultor();
+        Calculator calculator = new Calculator();
         //when
-        int result = calcultor.calculate(number.getNumbers());
+        int result = calculator.calculate(number.getNumbers());
         //then
         assertThat(result).isEqualTo(expected);
     }
@@ -24,10 +24,10 @@ class CalcultorTest {
     @Test
     void 연산기호아닐경우() {
         Number number = new Number("1 @ 3 $ 3");
-        Calcultor calcultor = new Calcultor();
+        Calculator calculator = new Calculator();
 
         assertThatThrownBy(() -> {
-            calcultor.calculate(number.getNumbers());
+            calculator.calculate(number.getNumbers());
         }).isInstanceOf(IllegalArgumentException.class)
                 .hasMessageContaining("연산기호가 아닙니다.");
     }

@@ -6,8 +6,8 @@ public class Main {
 
         Number number = new Number(inputView.input());
 
-        Calcultor calcultor = new Calcultor();
-        int result = calcultor.calculate(number.getNumbers());
+        Calculator calculator = new Calculator();
+        int result = calculator.calculate(number.getNumbers());
 
         ResultView resultView = new ResultView();
         resultView.print(result);

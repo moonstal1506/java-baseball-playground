@@ -13,9 +13,9 @@ public class UserBalls {
 
     private void createBalls(String balls) {
         checkBallsSize(balls);
-        CheckIsNumber(balls);
+        checkIsNumber(balls);
         for (String ball : splitBalls(balls)) {
-            addBall(CheckNumberRange((toInts(ball))));
+            addBall(checkNumberRange((toInts(ball))));
         }
     }
 
@@ -23,7 +23,7 @@ public class UserBalls {
         return balls.split("");
     }
 
-    private void CheckIsNumber(String balls) {
+    private void checkIsNumber(String balls) {
         boolean isNumber = balls.matches("[+-]?\\d*(\\.\\d+)?");
         if (!isNumber) {
             throw new IllegalArgumentException("숫자를 입력해야합니다.");
@@ -47,7 +47,7 @@ public class UserBalls {
         }
     }
 
-    private int CheckNumberRange(int ball) {
+    private int checkNumberRange(int ball) {
         if (!(1 <= ball && ball <= 9)) {
             throw new IllegalArgumentException("1~9까지 입력해주세요");
         }

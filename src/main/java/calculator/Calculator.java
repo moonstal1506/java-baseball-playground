@@ -1,6 +1,6 @@
 package calculator;
 
-public class Calcultor {
+public class Calculator {
 
     private int result;
 
