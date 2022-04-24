@@ -10,6 +10,10 @@ public class Judgement {
         this.ball = equalNumber-equalSpace;
     }
 
+    public boolean isAnswer(){
+        return strike==3;
+    }
+
     public String judge(){
         if(isNothing()){
             return "낫싱";
