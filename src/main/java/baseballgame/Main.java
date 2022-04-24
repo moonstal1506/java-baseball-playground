@@ -1,7 +1,8 @@
 package baseballgame;
 
 public class Main {
-    public static void main(String[] args) {
+
+    public static void playGame(){
         ComputerBalls computerBalls =new ComputerBalls();
         System.out.println(computerBalls.createBalls());
         boolean isAnswer=false;
@@ -17,6 +18,15 @@ public class Main {
             isAnswer = judgement.isAnswer();
             ResultView resultView = new ResultView();
             resultView.printResult(judgement.judge());
+        }
+    }
+
+    public static void main(String[] args) {
+        boolean isContinue=true;
+        while(isContinue){
+            playGame();
+            InputView inputView = new InputView();
+            isContinue=inputView.isContinue(inputView.restartInput());
         }
 
     }
