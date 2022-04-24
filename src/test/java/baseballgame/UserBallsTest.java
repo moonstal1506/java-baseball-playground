@@ -39,4 +39,11 @@ class UserBallsTest {
                 .hasMessageContaining("중복된 숫자입니다.");
     }
 
+    @Test
+    void 숫자아닐경우예외() {
+        assertThatThrownBy(() -> {
+            new UserBalls("asd");
+        }).isInstanceOf(IllegalArgumentException.class)
+                .hasMessageContaining("숫자를 입력해야합니다.");
+    }
 }
